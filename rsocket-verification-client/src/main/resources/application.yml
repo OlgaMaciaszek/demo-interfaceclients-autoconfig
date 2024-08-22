@@ -1,0 +1,10 @@
+server:
+  port: 9080
+spring:
+  application:
+    name: rsocket-verification-client
+  interfaceclients:
+    enabled: true
+    rsocket:
+      host: localhost
+      port: 7000

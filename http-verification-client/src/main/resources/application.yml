@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    discovery:
+      client:
+        simple:
+          instances:
+            http-verification:
+              - uri: http://localhost:8081
+  #    compatibility-verifier:
+#      enabled: false
+  interfaceclients:
+    http:
+      base-url: http://localhost:8081
+      clients:
+        http-verification:
+          base-url: http://http-verification
+      resttemplate:
+        enabled: true
+    enabled: true
+  application:
+    name: demo-interfaceclients-autoconfig
+
+logging:
+  level:
+    org.springframework.boot: DEBUG
